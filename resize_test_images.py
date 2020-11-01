@@ -14,10 +14,10 @@ for infile in glob.glob("*.jpg"):
     outfile = os.path.splitext(infile)[0] + ".thumbnail"
     try:
         im = Image.open(infile)
-        new_image = im.resize((153, 180))
+        new_image = im.resize((600, 500))
         #im.thumbnail(size, Image.ANTIALIAS)
         #print(outfile)
-        new_image.save("/home/plase1/Downloads/NOTA/test/" + infile, "JPEG")
+        new_image.save("/home/plase1/Downloads/NOTA/test/" + os.path.splitext(infile)[0] + ".jpg", "JPEG")
     except IOError:
         print ("cannot create thumbnail for '%s'" % infile)
       
@@ -31,10 +31,10 @@ for infile in glob.glob("*.JPG"):
     outfile = os.path.splitext(infile)[0] + ".thumbnail"
     try:
         im = Image.open(infile)
-        new_image = im.resize((153, 180))
+        new_image = im.resize((600, 500))
         #im.thumbnail(size, Image.ANTIALIAS)
         #print(outfile)
-        new_image.save("/home/plase1/Downloads/NOTA/test/" + infile, "JPEG")
+        new_image.save("/home/plase1/Downloads/NOTA/test/" + os.path.splitext(infile)[0] + ".jpg", "JPEG")
     except IOError:
         print ("cannot create thumbnail for '%s'" % infile)
     
