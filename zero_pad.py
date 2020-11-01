@@ -18,18 +18,18 @@ def zero_pad(img, max_a, max_b):
     
 a = 7297
 b = 4871
-os.chdir("/home/plase1/Downloads/NOTA/test/img")
+os.chdir("/home/plase1/Downloads/NOTA/train/img")
 
 for infile in glob.glob("*.jpg"):
     im = Image.open(infile)
     new_im = zero_pad(im, a, b)
     new_image = Image.fromarray(new_im.astype(np.uint8))
-    new_image.save("/home/plase1/Downloads/NOTA/test/" + os.path.splitext(infile)[0] + ".jpg", "JPEG")
+    new_image.save("/home/plase1/Downloads/NOTA/train/" + os.path.splitext(infile)[0] + ".jpg", "JPEG")
 
 for infile in glob.glob("*.JPG"):
     im = Image.open(infile)
     new_im = zero_pad(im, a, b)
     new_image = Image.fromarray(new_im.astype(np.uint8))
-    new_image.save("/home/plase1/Downloads/NOTA/test/" + os.path.splitext(infile)[0] + ".jpg", "JPEG")
+    new_image.save("/home/plase1/Downloads/NOTA/train/" + os.path.splitext(infile)[0] + ".jpg", "JPEG")
         
 
